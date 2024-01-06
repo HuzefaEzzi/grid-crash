@@ -11,7 +11,7 @@ body {
 
   display: grid;
   grid-template-areas:
-    'header header header'
+     'header header header' /*this indicates header spanning to three columns */
     'nav content sidebar'
     'nav footer footer';
   grid-template-columns: 1fr 4fr 1fr;
@@ -30,7 +30,7 @@ nav {
 }
 
 header {
-  grid-area: header;
+   grid-area: header; /*this is same name that we have given in tempalte */
 }
 
 nav {

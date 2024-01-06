@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background: #f5f5f5;
+}
+
+.container {
+  max-width: 960px;
+  margin: 100px auto;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* to wrap  */
+  /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+  gap: 10px;
+
+  
+}
+
+.item {
+  background: steelblue;
+  color: #fff;
+  font-size: 20px;
+  padding: 20px;
+  border: skyblue 1px solid;
+}
+
+@media(max-width:550px){
+  .container{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 
+   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+
+   Explanation:
+   repeat(auto-fill, minmax(200px, 1fr)): This uses the repeat function to repeat the column pattern. The auto-fill keyword is used to fill the available space with as many columns as possible while still satisfying the constraints.
+
+minmax(200px, 1fr): This part defines the size of each column. It uses the minmax function, which takes two parameters. The first parameter (200px in this case) is the minimum size of the column, and the second parameter (1fr in this case) is the maximum size. The 1fr unit represents a fraction of the available space, so it means that the column can grow to take up any remaining space beyond the minimum of 200 pixels.
+
+*/
